@@ -4,6 +4,7 @@ body{
     padding: 0;
     font-family: 'Arial-Regular';
     color: var(--white-color);
+    user-select: none;    
 }
 
 :root{
@@ -74,6 +75,12 @@ body{
 }
 
 .keyboard-key:active{
+    color: var(--white-color);
+    border-radius: 50%;
+    background-color: var(--orange-color);
+}
+
+.keyboard-key.active{
     color: var(--white-color);
     border-radius: 50%;
     background-color: var(--orange-color);
