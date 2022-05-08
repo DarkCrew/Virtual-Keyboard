@@ -1,0 +1,139 @@
+/*!**********************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/styles.css ***!
+  \**********************************************************************************************************************************************************/
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial-Regular";
+  color: #FFFFFF;
+  color: var(--white-color);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+:root {
+  --orange-color: #F27922;
+  --blue-color: #2F4274;
+  --darkBlue-color: #172444;
+  --white-color: #FFFFFF;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.keyboard-container {
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  width: 800px;
+  background: #172444;
+  background: var(--darkBlue-color);
+}
+
+.keyboard-title {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.keyboard-textarea-container {
+  display: flex;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.keyboard-textarea {
+  width: 100%;
+  resize: none;
+}
+
+.keyboard-buttons-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 10px;
+}
+
+.keyboard-key {
+  height: 40px;
+  width: 40px;
+  background: #2F4274;
+  background: var(--blue-color);
+  color: #FFFFFF;
+  color: var(--white-color);
+  border: 2px solid black;
+  transition: 0.5s;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.keyboard-key:hover {
+  color: #F27922;
+  color: var(--orange-color);
+  background: #172444;
+  background: var(--darkBlue-color);
+  border: 1px solid #F27922;
+  border: 1px solid var(--orange-color);
+}
+
+.keyboard-key:active {
+  color: #FFFFFF;
+  color: var(--white-color);
+  border-radius: 50%;
+  background-color: #F27922;
+  background-color: var(--orange-color);
+}
+
+.keyboard-key.active {
+  color: #FFFFFF;
+  color: var(--white-color);
+  border-radius: 50%;
+  background-color: #F27922;
+  background-color: var(--orange-color);
+}
+
+.keyboard-key.capslock {
+  width: 90px;
+}
+
+.keyboard-key.enter {
+  width: 110px;
+}
+
+.keyboard-key.shift {
+  width: 100px;
+}
+
+.keyboard-key.backspace {
+  width: 80px;
+}
+
+.keyboard-key.tab {
+  width: 50px;
+}
+
+.keyboard-key.ctrl {
+  width: 50px;
+}
+
+.keyboard-key.space {
+  width: 340px;
+}
+
+@font-face {
+  font-family: "Arial-Regular";
+  src: url(e8b1471c1f6fb339ab8a.ttf);
+}
+
+/*# sourceMappingURL=main.a1adda2637c39b78e603.css.map*/
