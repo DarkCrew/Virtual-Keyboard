@@ -31,17 +31,14 @@ function setLocalStorage() {
 window.addEventListener('beforeunload', setLocalStorage);
 
 function changeCaps(caps, lang) {
-  console.log(`CAPS: ${caps}, lang:${lang}`);
   document.querySelectorAll('.keyboard-key').forEach((key) => {
     const currentBtn = key.innerHTML;
     if (translate[lang][currentBtn.toLowerCase()] !== undefined) {
       if (caps === 'lower') {
-        console.log('lower');
         document.getElementById('capslock').classList.add('light');
         // eslint-disable-next-line no-param-reassign
         key.innerHTML = key.innerHTML.toUpperCase();
       } else {
-        console.log('UPPER');
         document.getElementById('capslock').classList.remove('light');
         // eslint-disable-next-line no-param-reassign
         key.innerHTML = key.innerHTML.toLowerCase();
@@ -93,12 +90,10 @@ KEYBOARD_KEYS.forEach((key) => {
         if (document.getElementById('q').innerHTML === 'q') {
           changeCaps('lower', 'ru');
         } else if (document.getElementById('q').innerHTML === 'Q') {
-          console.log(document.getElementById('q').innerHTML);
           changeCaps('upper', 'ru');
         } else if (document.getElementById('q').innerHTML === 'й') {
           changeCaps('lower', 'en');
         } else if (document.getElementById('q').innerHTML === 'Й') {
-          console.log(document.getElementById('q').innerHTML);
           changeCaps('upper', 'en');
         }
       });
@@ -217,7 +212,6 @@ function getLocalStorage() {
 window.addEventListener('load', getLocalStorage);
 
 document.addEventListener('keydown', (event) => {
-  console.log(event.code);
   switch (event.code) {
     case 'Digit1':
       KEYBOARD_TEXTAREA.value += '1';
@@ -352,7 +346,6 @@ document.addEventListener('keydown', (event) => {
         break;
       }
       if (document.getElementById('q').innerHTML === 'Q') {
-        console.log(document.getElementById('q').innerHTML);
         changeCaps('upper', 'ru');
         addAnimationBtns('capslock');
         break;
@@ -363,7 +356,6 @@ document.addEventListener('keydown', (event) => {
         break;
       }
       if (document.getElementById('q').innerHTML === 'Й') {
-        console.log(document.getElementById('q').innerHTML);
         changeCaps('upper', 'en');
         addAnimationBtns('capslock');
         break;
