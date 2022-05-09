@@ -5,6 +5,7 @@ body{
     font-family: 'Arial-Regular';
     color: var(--white-color);
     user-select: none;    
+    background-color: rgb(161, 161, 161);
 }
 
 :root{
@@ -16,6 +17,7 @@ body{
 
 .container{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -28,6 +30,17 @@ body{
     height: 600px;
     width: 800px;
     background: var(--darkBlue-color);
+}
+
+.keyboard-description,
+.keyboard-language-info{
+    margin: 0;
+    padding: 0;
+    padding-top: 20px;
+}
+
+.keyboard-language-info{
+    padding-top: 10px;
 }
 
 .keyboard-title{
@@ -47,6 +60,8 @@ body{
 .keyboard-textarea{
     width: 100%;
     resize: none;
+    pointer-events: none;
+    user-select: none;
 }
 
 .keyboard-buttons-container{
@@ -87,7 +102,23 @@ body{
 }
 
 .keyboard-key.capslock{
+    position: relative;
     width: 90px;
+}
+
+.keyboard-key.capslock::after{
+    position: absolute;
+    content: '';
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    top: 3px;
+    right: 3px;
+    background: var(--darkBlue-color);
+}
+
+.keyboard-key.capslock.light::after{
+    background: var(--orange-color);
 }
 
 .keyboard-key.enter{
